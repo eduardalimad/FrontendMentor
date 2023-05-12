@@ -1,6 +1,6 @@
 function myFunction() {
   var numberCard = document.getElementById("numberCard").value;
-  document.getElementById("demo").innerHTML = numberCard;
+  document.getElementById("cardNumber").innerHTML = numberCard;
 }
 
 function getName() {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,55 +9,49 @@
     <script src="../InteractiveCard/index.js"></script>
     <title>CardForm</title>
 </head>
-<body>    
+
+<body>
     <main class="container">
         <div class="content-left">
             <div class="front-card">
-                <img class="card-img" src="../InteractiveCard/public/images/bg-card-front.png" class="imagemCardFront" alt="" srcset="">
-                <section class="front-card-info">
-                    <img class="front-card-info-logo" src="../InteractiveCard/public/images/card-logo.svg" class="imagemCardFront" alt="" srcset="">
-                    <div class="div1"><span id="demo"></span></div>
-                    <div class="div2"><span id="name"></span></div>
-                    <div class="div3"><span id="data"></span></div>
-                </section>
-                    
-    
-                
+              <img class="card-img imagemCardFront" src="../InteractiveCard/public/images/bg-card-front.png" alt="">
+              <section class="front-card-info">
+                <img class="front-card-info-logo imagemCardFront" src="../InteractiveCard/public/images/card-logo.svg" alt="">
+                <div class="div1"><span id="cardNumber"></span></div>
+                <div class="div2"><span id="name"></span></div>
+                <div class="div3"><span id="data"></span></div>
+              </section>
             </div>
             <div class="back-card">
-                <img class="card-img" src="../InteractiveCard/public/images/bg-card-back.png" class="imagemCardBack" alt="" srcset=""> 
-                <section class="back-card-info">
-                    <div> 000</div>
-
-                </section>
-                    
-    
-                
+              <img class="card-img imagemCardBack" src="../InteractiveCard/public/images/bg-card-back.png" alt="">
+              <section class="back-card-info">
+                <div>000</div>
+              </section>
             </div>
-            
-        </div>
+          </div>
         <div class="content-right">
             <form action="">
-                <label>
-                    <h5> CARD HOLDER NAME: </h5>   
-                    <input type="text" id="nameCard" onkeyup="getName()">
-                    
-                </label>
-                <label>
-                    <h5> CARD NUMBER: </h5>   
-                    <input type="number" id="numberCard" onkeyup="myFunction()">
-                </label>
-                <label>
-                    <h5> EXP. DATE (MM/YY): </h5>   
-                    <input type="text" id="" onkeyup="myFunction()" class="inputData">
-                    <input type="text" id="" onkeyup="myFunction()" class="inputData">
-                </label>
-                
+              <div class="form-group">
+                <label for="nameCard" class="titleForm">CARD HOLDER NAME:</label>
+                <input type="text" id="nameCard" onkeyup="getName()">
+              </div>
+              <div class="form-group">
+                <label for="numberCard" class="titleForm">CARD NUMBER:</label>
+                <input type="text" inputmode="numeric" pattern="[\d ]{10,30}" id="numberCard" onkeyup="myFunction()">
+              </div>
+              <div class="form-group-cod">
+                <label for="" class="titleDate">EXP. DATE (MM/YY):</label>
+                <input type="text" id="" class="inputMM">
+                <input type="text" id="" class="inputYY">
+    
+                <label for="" class="titleCod">CVC:</label>
+                <input type="text" id="" class="inputCod">
+              </div>
+              <button class="btnLogin">Confirm</button>
             </form>
-        </div>
-        
-    
+          </div>
     </main>
-    
+
 </body>
+
 </html>
