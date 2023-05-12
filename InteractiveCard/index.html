@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../InteractiveCard/index.js"></script>
+    <title>CardForm</title>
+</head>
+<body>    
+    <main class="container">
+        <div class="content-left">
+            <div class="front-card">
+                <img class="card-img" src="../InteractiveCard/public/images/bg-card-front.png" class="imagemCardFront" alt="" srcset="">
+                <section class="front-card-info">
+                    <img class="front-card-info-logo" src="../InteractiveCard/public/images/card-logo.svg" class="imagemCardFront" alt="" srcset="">
+                    <div class="div1"><span id="demo"></span></div>
+                    <div class="div2"><span id="name"></span></div>
+                    <div class="div3"><span id="data"></span></div>
+                </section>
+                    
+    
+                
+            </div>
+            <div class="back-card">
+                <img class="card-img" src="../InteractiveCard/public/images/bg-card-back.png" class="imagemCardBack" alt="" srcset=""> 
+                <section class="back-card-info">
+                    <div> 000</div>
+
+                </section>
+                    
+    
+                
+            </div>
+            
+        </div>
+        <div class="content-right">
+            <form action="">
+                <label>
+                    <h5> CARD HOLDER NAME: </h5>   
+                    <input type="text" id="nameCard" onkeyup="getName()">
+                    
+                </label>
+                <label>
+                    <h5> CARD NUMBER: </h5>   
+                    <input type="number" id="numberCard" onkeyup="myFunction()">
+                </label>
+                <label>
+                    <h5> EXP. DATE (MM/YY): </h5>   
+                    <input type="text" id="" onkeyup="myFunction()" class="inputData">
+                    <input type="text" id="" onkeyup="myFunction()" class="inputData">
+                </label>
+                
+            </form>
+        </div>
+        
+    
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 100%);
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+main{
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+.content-left{
+    background-image: url("../InteractiveCard/public/images/bg-main-desktop.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+form{
+    gap: 1.5rem;
+    display: grid;
+}
+.card-img{
+    height: 30vh;
+}
+.front-card{
+    margin-left: calc(100vw - (84vw));
+    margin-top: calc(100vh - (83vh));
+    display: inline-block;
+    position: relative;
+}
+.front-card-info{
+    top: calc(100vh - (81vh));;
+    left: 20px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 52px;
+    grid-row-gap: 10px;
+    color: white;
+}
+
+.div1 { 
+    grid-area: 1 / 1 / 2 / 3; 
+}
+.div2 { 
+    grid-area: 2 / 1 / 3 / 2; 
+    grid-column-gap: calc(100vw - (84vw))
+}
+.div3 { 
+    grid-area: 2 / 2 / 3 / 3; 
+    text-align: end;}
+.front-card-info-logo{
+    top: calc(100vh - (117vh));
+    position: absolute;
+}
+.back-card{
+    margin-left: calc(100vw - (78vw));
+    margin-top: calc(100vh - (97vh));
+    display: inline-block;
+    position: relative;
+}
+.back-card-info{
+    top: calc(100vh - (87vh));
+    right: 40px;
+    position: absolute;
+    color: rgb(255, 254, 254);
+}
+ .content-right{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+input{
+    height: 3rem;
+    width: 22rem;
+    border-radius: 0.6rem;
+    border: solid 2px hsl(279, 6%, 55%);
+    font-size: medium;
+    padding: .5rem;
+
+}
+.inputData{
+    width: 4rem;
+    height: 2.5rem;
+}
