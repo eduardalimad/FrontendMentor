@@ -15,7 +15,7 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 30% 70%;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -23,10 +23,9 @@ main {
 }
 
 .content-left {
-    background-image: url("../InteractiveCard/public/images/bg-main-desktop.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    background-image: url("./public/images/bg-main-desktop.png");
+    z-index: -10;
+    /* background-color: hsl(278, 68%, 11%); */
 }
 
 .form-group {
@@ -66,7 +65,7 @@ main {
     height: 3rem;
     width: 22rem;
     border-radius: 0.6rem;
-    border: solid 2px transparent;
+    border: solid 1px transparent;
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
     font-size: medium;
@@ -89,33 +88,51 @@ main {
 }
 
 .front-card-info {
-    top: calc(100vh - (81vh));
+    top: calc(100vh - (85vh));
     left: 20px;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     grid-column-gap: 52px;
     grid-row-gap: 10px;
     color: white;
+    width: 89%;
 }
 
 .div1 {
     grid-area: 1 / 1 / 2 / 3;
+
 }
+.cardNumber{
+    letter-spacing: 3px;
+}
+[contentNumberCard=true]:empty:not(:focus):before {
+    content: attr(data-text);
+    letter-spacing: 3px;
+  }
 
 .div2 {
     grid-area: 2 / 1 / 3 / 2;
-    grid-column-gap: calc(100vw - (84vw))
+    grid-column-gap: calc(100vw - (84vw));
+    font-size: 14px;
+    width: 7rem;
 }
-
+[contentNameCard=true]:empty:not(:focus):before {
+    content: attr(data-text)
+  }
 .div3 {
     grid-area: 2 / 2 / 3 / 3;
     text-align: end;
+    font-size: 14px;
 }
+[contentDateCard=true]:empty:not(:focus):before {
+    content: attr(data-text)
+  }
 
 .front-card-info-logo {
-    top: calc(100vh - (117vh));
+    top: calc(100vh - (113vh));
     position: absolute;
+    height: 2.2rem;
 }
 
 .back-card {
@@ -143,9 +160,18 @@ input {
     height: 3rem;
     width: 22rem;
     border-radius: 0.6rem;
-    border: solid 2px hsl(279, 6%, 55%);
+    border: solid 1.2px hsl(279, 6%, 55%);
     font-size: medium;
     padding: .5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+ input:focus {
+
+    border: solid 1.4px hsl(278, 45%, 39%);
+    border-radius: 0.6rem;
+    outline: 0;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .inputMM,
